@@ -6,6 +6,8 @@ import logging
 import sys
 import warnings
 from urllib.parse import urlparse
+import dagshub
+dagshub.init(repo_owner='govinbimsara', repo_name='mlfowtest', mlflow=True)
 
 import numpy as np
 import pandas as pd
