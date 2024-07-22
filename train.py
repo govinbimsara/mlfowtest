@@ -54,22 +54,25 @@ if __name__ == "__main__":
 
     alpha = float(sys.argv[1]) if len(sys.argv) > 1 else 0.5
     l1_ratio = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5
+    max_iter = int(sys.argv[3]) if len(sys.argv) > 1 else 1000
+
 
     with mlflow.start_run():
-        lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
+        lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, max_iter=max_iter,random_state=42)
         lr.fit(train_x, train_y)
 
         predicted_qualities = lr.predict(test_x)
 
         (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
 
-        print(f"Elasticnet model (alpha={alpha:f}, l1_ratio={l1_ratio:f}):")
+        print(f"Elasticnet model (alpha={alpha:f}, l1_ratio={l1_ratio:f}, max_iter={max_iter:f})")
         print(f"  RMSE: {rmse}")
         print(f"  MAE: {mae}")
         print(f"  R2: {r2}")
 
         mlflow.log_param("alpha", alpha)
         mlflow.log_param("l1_ratio", l1_ratio)
+        mlflow.log_param("max_iter", max_iter)
         mlflow.log_metric("rmse", rmse)
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)

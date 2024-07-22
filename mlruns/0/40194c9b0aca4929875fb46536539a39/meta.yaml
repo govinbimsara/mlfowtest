@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/mlfowtest/mlruns/0/40194c9b0aca4929875fb46536539a39/artifacts
+end_time: 1721641615717
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 40194c9b0aca4929875fb46536539a39
+run_name: selective-flea-696
+run_uuid: 40194c9b0aca4929875fb46536539a39
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721641614124
+status: 3
+tags: []
+user_id: codespace

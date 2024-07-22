@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/mlfowtest/mlruns/0/84f216be41b44dad9efa5ab9e0ae5501/artifacts
+end_time: 1721641304782
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 84f216be41b44dad9efa5ab9e0ae5501
+run_name: shivering-fowl-682
+run_uuid: 84f216be41b44dad9efa5ab9e0ae5501
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721641303111
+status: 3
+tags: []
+user_id: codespace

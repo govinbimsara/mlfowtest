@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/mlfowtest/mlruns/0/8752e958d136467e856f7e01ce63911b/artifacts
+end_time: 1721641601214
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8752e958d136467e856f7e01ce63911b
+run_name: capable-pig-134
+run_uuid: 8752e958d136467e856f7e01ce63911b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721641599625
+status: 3
+tags: []
+user_id: codespace
