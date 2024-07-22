@@ -2,12 +2,12 @@
 # P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis.
 # Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553, 2009.
 
+import os
 import logging
 import sys
 import warnings
 from urllib.parse import urlparse
 import dagshub
-dagshub.init(repo_owner='govinbimsara', repo_name='mlfowtest', mlflow=True)
 
 import numpy as np
 import pandas as pd
@@ -18,6 +18,12 @@ from sklearn.model_selection import train_test_split
 import mlflow
 import mlflow.sklearn
 from mlflow.models import infer_signature
+
+repo_owner = os.getenv('DAGSHUB_USERNAME')
+repo_name = os.getenv('DAGSHUB_REPOSITORY')
+
+# dagshub.init(repo_owner=repo_owner, repo_name=repo_name, mlflow=True)
+dagshub.init(repo_owner='govinbimsara', repo_name='mlfowtest', mlflow=True)
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
